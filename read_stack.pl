@@ -1,9 +1,9 @@
-#!/bin/perl
+#!/usr/bin/perl
 
 #Read argument 
 my $nb_args = $#ARGV+1;
 if($nb_args != 1) {
-    print "\n Usage : ./read_stack.pl <log_file>";
+    print "Usage : ./read_stack.pl <log_file>\n";
     exit;
 }
 #open the logfile and get the constraint error raised 
@@ -16,7 +16,7 @@ local $/;
 $content=FILE;
 
 my @exception;
-@exception = ($content=~ /-+\s+raised [\.\w\s:]+\s*Call stack traceback locations:\s* ([0x[\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef] ]/));
+@exception = ($content=~ /-+\s+raised [\.\w\s:]+\s*Call stack traceback locations:\s*(\b(0x[\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef]| )\b)/);
 my $i;
 foreach $i (@exception) {
     print "$i\n";
