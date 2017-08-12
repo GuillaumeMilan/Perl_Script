@@ -4,7 +4,8 @@
 #if the argument don"t contain the the file and the project
 my $num_args = $#ARGV+1
 if($num_args <= 2 || $num_args>3) {
-    print "\nUsage <project>.gpr <file_to_find> [-p platform]";
+    print "\nUsage ./find_file.pl <project>.gpr <file_to_find> [-p platform]";
+    exit;
 }
 #open the gpr file and parse all the folder to search in 
 open(FILE, $ARGV[0]) or die "Cannot open the file".$ARGV[0];
