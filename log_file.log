@@ -1,0 +1,16 @@
+--------------------------------------------------------------------------------
+raised SRV_MRTK.TRAITER_ERREUR.FATAL_ERROR : srv_mrtk.2.ada:574
+Call stack traceback locations:
+0x80c8f9a 0x84a8875 0x8d93952 0x8d8ae80 0x8d8b834 0x853933e 0x853b511 0x804f90d 0x8de56c7 0xb7775078 0xb76aaabc 0xfffffffe
+--------------------------------------------------------------------------------
+
+
+
+--------------------------------------------------------------------------------
+raised SRV_MRTK.TRAITER_ERREUR.FATAL_ERROR : srv_mrtk.2.ada:574
+Call stack traceback locations:
+0x80c8f9a 0x84a8875 0x8d93952 0x8d8ae80 0x8d8b834 0x853933e 0x853b511 0x804f90d 0x8de56c7 0xb7775078 0xb76aaabc 0xfffffffe
+--------------------------------------------------------------------------------
+
+
+
