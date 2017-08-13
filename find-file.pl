@@ -12,7 +12,7 @@ open(FILE, $ARGV[0]) or die "Cannot open the file".$ARGV[0];
 my $content; 
 local $/;
 #take all the content of the gpr file to parse
-$content=FILE;
+$content=<FILE>;
 #if no platform specified (only 1 platform for the compilation)
 if($num_args==2) { 
 #take all the folder used in the gpr file

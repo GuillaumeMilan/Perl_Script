@@ -13,10 +13,10 @@ open(FILE, $ARGV[0]) or die "Cannot open the logfile".$ARGV[0];
 my $content;
 local $/;
 
-$content=FILE;
-
+$content=<FILE>;
 my @exception;
-@exception = ($content=~ /-+\s+raised [\.\w\s:]+\s*Call stack traceback locations:\s*(\b(0x[\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef][\dabcdef]| )\b)/);
+#We gonna multiple regex to print the result clearly 
+@exception = ($content=~ /-+.*(0x[\da-fA-F]{0,8})-+/gi);
 my $i;
 foreach $i (@exception) {
     print "$i\n";
